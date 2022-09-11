@@ -1,0 +1,199 @@
+@\import "https://malscraper.azurewebsites.net/covers/anime/DarkWolfik/presets/dataimagelinkbefore";
+@\import "https://malscraper.azurewebsites.net/covers/manga/DarkWolfik/presets/dataimagelinkbefore";
+ 
+ 
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Theme%20-%20Compressed.css";
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Hover%20Image%20Compressed.css";
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Dark%20Mode%20Compressed.css";
+ 
+ 
+ 
+/*-S-T-A-R-T--------------------*\
+| Banner Titles   |
+\*------------------------------*/
+ 
+body{ --name: "Horimiya"; 
+}
+ 
+ 
+/*-S-T-A-R-T--------------------*\
+| Banner Background Image
+To change background images: delete what's in the parenthesis. Upload 
+the new background to Imgur or a similar site, then copy the direct link (or Original GIF link if it's animated) and paste it into the parenthesis. Save.
+|
+\*------------------------------*/
+ 
+ 
+body { --banner: url(https://i.imgur.com/ONqm1Of.jpg); }
+ 
+ 
+ 
+ 
+/*-S-T-A-R-T--------------------*\
+| Banner Character (Render)
+Background size is the size of the image. 100% is full size. 
+ 
+The first percentage after background position is the position from the left. Lower percentages move it left and you can go negative. The second percentage is position from the top. Lower percentages move it down. 
+|
+\*------------------------------*/
+ 
+ 
+body { --character: url();
+}
+ #list-container #cover-image-container {
+    background-size: 60%;
+    background-position: 80% 20%;
+ 
+}
+ 
+ 
+/*-S-T-A-R-T--------------------*\
+| Banner Avatar    |
+\*------------------------------*/
+ 
+body  { --avatar: url(https://i.imgur.com/j56ggPN.jpg); }
+ 
+ 
+ 
+/*-S-T-A-R-T--------------------*\
+| Per-Category Background Image
+If you want a wallpaper on a category, you can add direct background images links to the parenthesis here for each category! By default, there is no wallpaper.
+ 
+|
+\*------------------------------*/
+ 
+body { --background: url(https://i.imgur.com/RB1ka1Z.jpg); }
+ 
+ 
+/*SIDE RENDERS (left and right)
+To move the renders, adjust the percentage after "left" or "right" and "top". You can use negatives. The percentage is the distance from the left, top, or right. 
+ 
+To resize the renders, adjust the percentage after "width". 0% will remove the render.*/
+ 
+body footer:before {
+left: -5%;
+top: 15%;
+width: 35% !important;
+background-size: contain !important;
+background-image: url();
+background-position: left bottom !important;
+} 
+body footer:after {
+right: -10%;
+top: 0%;
+width: 40% !important;
+background-size: contain !important;;
+background-image: url();
+background-position: right bottom !important;
+}
+/*------------------------------*\
+| Character Renders R0.3         |
+\*------------------------------*/
+ 
+footer:before, footer:after {
+	content: "";
+	position: fixed;
+	top: 0;
+	z-index: -1;
+ 
+	width: calc(50% - 538px);
+	min-width: 262px;
+	height: 100%;
+	background: transparent no-repeat center bottom / contain scroll;
+}
+ 
+ 
+ 
+/*------------------------------*\
+| List colors       |
+ 
+pbg is the color of the wallpaper when you have no image there
+ 
+bg is the color of the tables and rows
+ 
+text is the color of your anime
+titles and some text on your rows (numbers, score, information, tags)
+ 
+text-dim is other text on your rows (edit, more, non-links, Progress:, Rated:, etc)
+ 
+btn-bg is the button color around score and tags
+ 
+text-head is the category links unselected
+ 
+text-head-h is the current category link selected
+ 
+btn-head-bg-h is buttons under the header when selected
+ 
+btn-text-h is that button text
+ 
+banner-text is the banner text color, and its shadow color is under that
+ 
+Get a new HTML/Hex color number here, or use color names.
+https://htmlcolorcodes.com/
+ 
+Get new RGBA colors here for the rows
+https://cssgenerator.org/rgba-and-hex-color-generator.html
+\*------------------------------*/
+:root {
+    --pbg: #161616;
+    --bg: rgba(0,0,0,.8);
+    --bg-dark: #444;
+    --text: white;
+    --text-h: #416abe;
+    --text-dim: #777;
+    --text-dim-h: #999;
+    --text-dark: #ababab;
+    --shadow: rgba(0,0,0,0.8);
+    --icon: #959595;
+    --accent: #4a0182;
+    --banner-text: #f6f5ff;
+    --banner-text-shadow: #e4bef4;
+    --btn-bg: #191919;
+    --btn-bg-h: #ababab;
+    --btn-head-bg-h: #416abe;
+    --btn-text-h: #212121;
+    --text-head: #9b9b9b;
+    --text-head-h: #ababab;
+    --cover-bg: #090909;
+    --edit-btn: #323232;
+    --checkmark: #416abe;
+}
+
+/-S-T-A-R-T--------------------\
+| CatCol Header Text R0.0        |
+*------------------------------/
+.status-menu .status-button{transition:color .3s ease}.status-menu .status-button.on:nth-of-type(1),.status-menu .status-button:nth-of-type(1):hover{color:var(--accent)!important}
+.status-menu .status-button.on:nth-of-type(2),.status-menu .status-button:nth-of-type(2):hover{color:var(--watching)!important}
+.status-menu .status-button.on:nth-of-type(3),.status-menu .status-button:nth-of-type(3):hover{color:var(--completed)!important}
+.status-menu .status-button.on:nth-of-type(4),.status-menu .status-button:nth-of-type(4):hover{color:var(--onhold)!important}
+.status-menu .status-button.on:nth-of-type(5),.status-menu .status-button:nth-of-type(5):hover{color:var(--dropped)!important}
+.status-menu .status-button.on:nth-of-type(6),.status-menu .status-button:nth-of-type(6):hover{color:var(--plantowatch)!important}
+/------------------------E-N-D-*/
+}
+ 
+/*------------------------------*\
+| List colors       |
+status menu container is the color of the header under the banner, and the last codes control the rows on hover and the glow around them. Make a new box shadow here
+https://html-css-js.com/css/generator/box-shadow/
+\*------------------------------*/
+ 
+.status-menu-container{
+background: #212121; 
+}
+ 
+.list-table-data:hover{
+background: black; 
+box-shadow: 1px 1px 15px 9px #FF0000;
+ 
+}
+
+.list-table .list-table-data .data.status.watching ~ .data.title .link.sort {color: #2db039 !important 
+}
+.list-table .list-table-data .data.status.completed ~ .data.title .link.sort {color: #213a7b !important
+}
+.list-table .list-table-data .data.status.onhold ~ .data.title .link.sort {color: #ebc33d !important
+}
+.list-table .list-table-data .data.status.dropped ~ .data.title .link.sort {color: #a12f31 !important
+}
+.list-table .list-table-data .data.status.plantowatch ~ .data.title .link.sort {color: #bfbfbf !important
+}
